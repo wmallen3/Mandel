@@ -256,9 +256,8 @@ public class Mandel extends Frame
             try
             {
                 sem.acquire();
-                SubImage    s;
-                while ((s = drawList.poll()) != null);
-                while ((s = holdList.poll()) != null);
+                while ((drawList.poll()) != null);
+                while ((holdList.poll()) != null);
                 sem.release();
             }
             
